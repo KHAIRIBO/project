@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-monorepo",
+  "version": "1.0.0",
+  "description": "Portfolio Monorepo for Frontend and Backend",
+  "scripts": {
+    "install": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm run start"
+  }
+}
