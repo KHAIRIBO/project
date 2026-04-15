@@ -39,7 +39,7 @@ export default function Services() {
           <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2 text-white/80">Project Type</label>
+                <label className="block text-sm font-medium mb-2 text-slate-700">Project Type</label>
                 <select className="input-field appearance-none" required>
                   <option value="" disabled selected>Select a service type</option>
                   <option value="web">Web Development</option>
@@ -49,7 +49,7 @@ export default function Services() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-white/80">Budget Range</label>
+                <label className="block text-sm font-medium mb-2 text-slate-700">Budget Range</label>
                 <select className="input-field appearance-none" required>
                   <option value="" disabled selected>Select budget</option>
                   <option value="small">&lt; $1,000</option>
@@ -60,7 +60,7 @@ export default function Services() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-2 text-white/80">Project Description</label>
+              <label className="block text-sm font-medium mb-2 text-slate-700">Project Description</label>
               <textarea 
                 rows="5" 
                 className="input-field resize-none" 

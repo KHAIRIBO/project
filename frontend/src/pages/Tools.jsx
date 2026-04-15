@@ -61,7 +61,7 @@ export default function Tools() {
             <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{tool.title}</h3>
             <p className="text-textMuted mb-8 flex-grow">{tool.description}</p>
             
-            <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
+            <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-200">
               <span className="text-sm font-medium text-textMuted flex items-center gap-2">
                 <Download size={16} /> {tool.downloadsCount}
               </span>

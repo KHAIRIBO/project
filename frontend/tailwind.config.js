@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        surface: '#121212',
-        surfaceAlt: '#1e1e1e',
+        background: '#f8fafc',
+        surface: '#ffffff',
+        surfaceAlt: '#f1f5f9',
         primary: '#3b82f6',
         primaryDark: '#2563eb',
         accent: '#8b5cf6',
-        textMain: '#ffffff',
-        textMuted: '#9ca3af'
+        textMain: '#0f172a',
+        textMuted: '#64748b'
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
