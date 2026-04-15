@@ -1,10 +1,11 @@
 {
-  "name": "portfolio-monorepo",
+  "name": "node-render-app",
   "version": "1.0.0",
-  "description": "Portfolio Monorepo for Frontend and Backend",
+  "main": "server.js",
   "scripts": {
-    "install": "cd client && npm install && cd ../server && npm install",
-    "build": "cd client && npm run build",
-    "start": "cd server && npm run start"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
   }
 }
