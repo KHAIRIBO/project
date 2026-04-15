@@ -7,9 +7,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 top-0 left-0 px-6 py-4 transition-all duration-300 backdrop-blur-lg bg-surface/80 border-b border-slate-200">
+    <nav className="fixed w-full z-50 top-0 left-0 px-6 py-4 transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-green-200">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter text-slate-900">
+        <Link to="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter text-green-900">
           <div className="w-8 h-8 bg-primary rounded-xl flex items-center justify-center rotate-3 hover:rotate-12 transition-transform shadow-lg shadow-primary/50">
             <Package size={20} className="text-white" />
           </div>
@@ -22,7 +22,7 @@ export default function Navbar() {
             <Wrench size={18} /> Tools
           </Link>
           <Link to="/services" className="text-textMuted hover:text-primary transition-colors">Services</Link>
-          <div className="h-6 w-px bg-slate-200"></div>
+          <div className="h-6 w-px bg-green-200"></div>
           <Link to="/login" className="text-textMuted hover:text-primary transition-colors">Login</Link>
           <Link to="/signup" className="btn-primary">Get Started</Link>
         </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-slate-200 py-6 px-6 flex flex-col gap-6 shadow-2xl animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-green-200 py-6 px-6 flex flex-col gap-6 shadow-2xl animate-fade-in">
           <Link to="/tools" onClick={() => setIsOpen(false)} className="text-xl">Tools</Link>
           <Link to="/services" onClick={() => setIsOpen(false)} className="text-xl">Services</Link>
           <Link to="/login" onClick={() => setIsOpen(false)} className="text-xl text-primary">Login</Link>

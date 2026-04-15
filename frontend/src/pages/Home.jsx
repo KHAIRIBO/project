@@ -18,7 +18,7 @@ export default function Home() {
         </motion.div>
         
         <motion.h1 
-          className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-tight text-transparent bg-clip-text bg-gradient-to-br from-slate-900 via-slate-800 to-slate-500"
+          className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-tight text-transparent bg-clip-text bg-gradient-to-br from-green-600 via-green-500 to-green-400"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
