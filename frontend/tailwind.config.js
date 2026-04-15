@@ -10,9 +10,9 @@ export default {
         background: '#f8fafc',
         surface: '#ffffff',
         surfaceAlt: '#f1f5f9',
-        primary: '#3b82f6',
-        primaryDark: '#2563eb',
-        accent: '#8b5cf6',
+        primary: '#22c55e',
+        primaryDark: '#16a34a',
+        accent: '#0d9488',
         textMain: '#0f172a',
         textMuted: '#64748b'
       },
