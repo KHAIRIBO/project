@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Shield, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AdBanner from '../components/AdBanner';
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
           </Link>
         </motion.div>
       </section>
+
+      {/* Ad Banner – Below Hero */}
+      <AdBanner slot="1234567890" format="horizontal" />
 
       {/* Features Showcase */}
       <section className="w-full py-20 mt-10">

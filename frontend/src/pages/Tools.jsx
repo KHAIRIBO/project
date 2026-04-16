@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Download, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import AdBanner from '../components/AdBanner';
 
 export default function Tools() {
   const [tools, setTools] = useState([]);
@@ -39,6 +40,9 @@ export default function Tools() {
           />
         </div>
       </div>
+
+      {/* Ad Banner – Below Search Bar */}
+      <AdBanner slot="0987654321" format="leaderboard" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredTools.map((tool, i) => (
