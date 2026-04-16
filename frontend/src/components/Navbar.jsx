@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Wrench, Menu, X, LayoutDashboard, LogOut, ChevronDown } from 'lucide-react';
+import { Wrench, Menu, X, LayoutDashboard, LogOut, ChevronDown, BarChart3 } from 'lucide-react';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -61,6 +61,13 @@ export default function Navbar() {
                   >
                     <LayoutDashboard size={16} className="text-primary" /> Dashboard
                   </Link>
+                  <Link
+                    to="/analytics"
+                    onClick={() => setDropdownOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-textMain hover:bg-surfaceAlt transition-colors"
+                  >
+                    <BarChart3 size={16} className="text-accent" /> Analytics
+                  </Link>
                   <div className="h-px bg-blue-100 mx-3"></div>
                   <button
                     onClick={handleLogout}
@@ -95,6 +102,9 @@ export default function Navbar() {
             <>
               <Link to="/dashboard" onClick={() => setIsOpen(false)} className="text-xl flex items-center gap-2">
                 <LayoutDashboard size={18} className="text-primary" /> Dashboard
+              </Link>
+              <Link to="/analytics" onClick={() => setIsOpen(false)} className="text-xl flex items-center gap-2">
+                <BarChart3 size={18} className="text-accent" /> Analytics
               </Link>
               <button onClick={handleLogout} className="text-xl text-red-500 flex items-center gap-2 text-left">
                 <LogOut size={18} /> Logout

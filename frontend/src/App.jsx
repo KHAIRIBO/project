@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Analytics';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/analytics" element={<Analytics />} />
         </Routes>
       </main>
       <footer className="py-8 text-center text-textMuted border-t border-blue-100 mt-20">
