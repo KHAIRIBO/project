@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Package, Wrench, Menu, X, LayoutDashboard, LogOut, ChevronDown } from 'lucide-react';
+import { Wrench, Menu, X, LayoutDashboard, LogOut, ChevronDown } from 'lucide-react';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import logo from '../logo/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +18,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 top-0 left-0 px-6 py-4 transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-green-200">
+    <nav className="fixed w-full z-50 top-0 left-0 px-6 py-4 transition-all duration-300 backdrop-blur-lg bg-white/90 border-b border-blue-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter text-green-900">
-          <div className="w-8 h-8 bg-primary rounded-xl flex items-center justify-center rotate-3 hover:rotate-12 transition-transform shadow-lg shadow-primary/50">
-            <Package size={20} className="text-white" />
-          </div>
-          SaaS<span className="text-primary font-light">Hub</span>
+        <Link to="/" className="flex items-center -ml-2">
+          <img src={logo} alt="TanitTools Logo" className="h-14 w-auto object-contain" />
         </Link>
         
         {/* Desktop Menu */}
@@ -32,14 +30,14 @@ export default function Navbar() {
             <Wrench size={18} /> Tools
           </Link>
           <Link to="/services" className="text-textMuted hover:text-primary transition-colors">Services</Link>
-          <div className="h-6 w-px bg-green-200"></div>
+          <div className="h-6 w-px bg-blue-200"></div>
 
           {user ? (
             /* ---- Logged In State ---- */
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 bg-surfaceAlt border border-green-200 rounded-full px-3 py-1.5 hover:border-primary transition-all"
+                className="flex items-center gap-2 bg-surfaceAlt border border-blue-200 rounded-full px-3 py-1.5 hover:border-primary transition-all"
               >
                 {user.photoURL ? (
                   <img src={user.photoURL} alt="avatar" className="w-7 h-7 rounded-full object-cover" />
@@ -55,7 +53,7 @@ export default function Navbar() {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-52 bg-white border border-green-200 rounded-2xl shadow-xl shadow-green-100 overflow-hidden animate-fade-in">
+                <div className="absolute right-0 mt-2 w-52 bg-white border border-blue-200 rounded-2xl shadow-xl shadow-blue-100 overflow-hidden animate-fade-in">
                   <Link
                     to="/dashboard"
                     onClick={() => setDropdownOpen(false)}
@@ -63,7 +61,7 @@ export default function Navbar() {
                   >
                     <LayoutDashboard size={16} className="text-primary" /> Dashboard
                   </Link>
-                  <div className="h-px bg-green-100 mx-3"></div>
+                  <div className="h-px bg-blue-100 mx-3"></div>
                   <button
                     onClick={handleLogout}
                     className="w-full flex items-center gap-3 px-4 py-3 text-red-500 hover:bg-red-50 transition-colors"
@@ -90,7 +88,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-green-200 py-6 px-6 flex flex-col gap-6 shadow-2xl animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-blue-200 py-6 px-6 flex flex-col gap-6 shadow-2xl animate-fade-in">
           <Link to="/tools" onClick={() => setIsOpen(false)} className="text-xl">Tools</Link>
           <Link to="/services" onClick={() => setIsOpen(false)} className="text-xl">Services</Link>
           {user ? (

@@ -22,8 +22,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>
-      <footer className="py-8 text-center text-textMuted border-t border-green-200 mt-20">
-        <p>&copy; {new Date().getFullYear()} SaaS Platform. All rights reserved.</p>
+      <footer className="py-8 text-center text-textMuted border-t border-blue-100 mt-20">
+        <p>&copy; {new Date().getFullYear()} TanitTools. All rights reserved.</p>
       </footer>
     </div>
   );

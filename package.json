@@ -8,6 +8,7 @@
     "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "concurrently": "^9.2.1",
     "express": "^4.22.1",
     "express-session": "^1.19.0",

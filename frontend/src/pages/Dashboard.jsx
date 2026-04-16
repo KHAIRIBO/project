@@ -73,7 +73,7 @@ export default function Dashboard() {
                 </div>
                 <div>
                   {req.status === 'Completed' ? (
-                    <span className="flex items-center gap-1 text-sm font-medium text-green-400 bg-green-400/10 px-3 py-1 rounded-full">
+                    <span className="flex items-center gap-1 text-sm font-medium text-blue-500 bg-blue-50 px-3 py-1 rounded-full">
                       <CheckCircle size={14} /> Completed
                     </span>
                   ) : (

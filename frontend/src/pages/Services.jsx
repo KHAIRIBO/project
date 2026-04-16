@@ -31,7 +31,7 @@ export default function Services() {
         
         {submitted ? (
           <div className="flex flex-col items-center justify-center py-20 text-center relative z-10">
-            <CheckCircle size={64} className="text-green-500 mb-6" />
+            <CheckCircle size={64} className="text-blue-500 mb-6" />
             <h2 className="text-3xl font-bold mb-4">Request Submitted Successfully!</h2>
             <p className="text-textMuted max-w-md">Our team will review your requirements and get back to you within 24 hours.</p>
           </div>
