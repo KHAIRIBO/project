@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 // Replace these with your real AdSense publisher ID and slot IDs
 // from https://adsense.google.com
-const PUBLISHER_ID = 'ca-pub-XXXXXXXXXXXXXXXX'; // <-- your AdSense publisher ID
+const PUBLISHER_ID = 'ca-pub-9796935070412225';
 
 export default function AdBanner({ slot, format = 'auto', style = {} }) {
   useEffect(() => {
